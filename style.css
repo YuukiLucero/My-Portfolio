@@ -1,0 +1,1099 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050305;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   PINK THEME
+========================================= */
+
+:root {
+    --pink: #ff3cac;
+    --pink-neon: #ff2fa3;
+    --pink-light: #ff71c6;
+    --pink-dark: #d91b82;
+
+    --black: #050305;
+    --dark: #090609;
+
+    --border: rgba(255, 60, 172, 0.13);
+
+    --gray: #858085;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 72px;
+
+    z-index: 1000;
+
+    background: rgba(5, 3, 5, 0.65);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid transparent;
+
+    transition: 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(5, 3, 5, 0.95);
+
+    border-bottom-color: var(--border);
+}
+
+.nav-container {
+    max-width: 1150px;
+
+    height: 100%;
+
+    margin: auto;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--pink);
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+}
+
+nav a {
+    position: relative;
+
+    color: #858085;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--pink);
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -9px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--pink);
+
+    box-shadow: 0 0 8px var(--pink);
+
+    transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.menu-btn {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 21px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HOME
+========================================= */
+
+.home {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 100px 25px 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND GRID
+========================================= */
+
+.home::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(5, 3, 5, 0.96),
+            rgba(5, 3, 5, 0.98)
+        ),
+
+        linear-gradient(
+            rgba(255, 60, 172, 0.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255, 60, 172, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        auto,
+        50px 50px,
+        50px 50px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   NEON PINK BACKGROUND GLOW
+========================================= */
+
+.background-glow {
+    position: absolute;
+
+    width: 550px;
+    height: 550px;
+
+    right: -150px;
+    top: 20%;
+
+    border-radius: 50%;
+
+    background: rgba(255, 47, 163, 0.10);
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+
+/* Additional subtle pink glow */
+
+.home::after {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    left: -180px;
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 47, 163, 0.055);
+
+    filter: blur(90px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   HOME CONTAINER
+========================================= */
+
+.home-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.05fr 0.95fr;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+/* =========================================
+   HOME CONTENT
+========================================= */
+
+.home-content {
+    max-width: 650px;
+}
+
+
+/* =========================================
+   WELCOME
+========================================= */
+
+.welcome {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    color: #747074;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--pink-neon);
+
+    box-shadow:
+        0 0 8px var(--pink-neon),
+        0 0 18px rgba(255, 47, 163, 0.5);
+
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.home h1 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(52px, 6vw, 80px);
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 12px;
+}
+
+.home h1 span {
+    color: var(--pink);
+
+    text-shadow:
+        0 0 15px rgba(255, 60, 172, 0.25),
+        0 0 35px rgba(255, 47, 163, 0.12);
+}
+
+
+/* =========================================
+   DEVELOPER TITLE
+========================================= */
+
+.home h2 {
+    min-height: 40px;
+
+    margin-bottom: 24px;
+
+    color: #b7b2b7;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(22px, 3vw, 30px);
+
+    font-weight: 500;
+}
+
+.typing-text {
+    color: white;
+}
+
+.cursor {
+    color: var(--pink-neon);
+
+    text-shadow:
+        0 0 10px var(--pink-neon);
+
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.description {
+    max-width: 580px;
+
+    color: #858085;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    margin-bottom: 7px;
+}
+
+.description.second {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.home-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-width: 145px;
+
+    padding: 13px 20px;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+/* Neon Pink Button */
+
+.primary-btn {
+    color: white;
+
+    background: var(--pink-neon);
+
+    box-shadow:
+        0 0 10px rgba(255, 47, 163, 0.20),
+        0 0 25px rgba(255, 47, 163, 0.10);
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+
+    background: #ff45ad;
+
+    box-shadow:
+        0 0 15px rgba(255, 47, 163, 0.45),
+        0 0 35px rgba(255, 47, 163, 0.20);
+}
+
+
+/* Outline */
+
+.secondary-btn {
+    color: #c4bec4;
+
+    border: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, 0.015);
+}
+
+.secondary-btn:hover {
+    color: var(--pink);
+
+    border-color:
+        rgba(255, 60, 172, 0.45);
+
+    box-shadow:
+        0 0 15px rgba(255, 47, 163, 0.08);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   SOCIALS
+========================================= */
+
+.socials {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: 32px;
+}
+
+.socials > span {
+    color: #525052;
+
+    font-size: 10px;
+
+    margin-right: 3px;
+}
+
+.socials a {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #737073;
+
+    border: 1px solid var(--border);
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: var(--pink);
+
+    border-color:
+        rgba(255, 60, 172, 0.4);
+
+    box-shadow:
+        0 0 15px rgba(255, 47, 163, 0.10);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   PROFILE AREA
+========================================= */
+
+.profile-area {
+    position: relative;
+
+    width: 430px;
+    height: 430px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Pink Glow */
+
+.profile-glow {
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: var(--pink-neon);
+
+    opacity: 0.10;
+
+    filter: blur(80px);
+}
+
+
+/* =========================================
+   OUTER CIRCLE
+========================================= */
+
+.outer-circle {
+    position: absolute;
+
+    width: 390px;
+    height: 390px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(255, 60, 172, 0.10);
+
+    animation: rotate 20s linear infinite;
+}
+
+.outer-circle::before {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    background: var(--pink-neon);
+
+    border-radius: 50%;
+
+    top: 40px;
+    left: 55px;
+
+    box-shadow:
+        0 0 10px var(--pink-neon),
+        0 0 20px var(--pink-neon);
+}
+
+@keyframes rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================
+   MIDDLE CIRCLE
+========================================= */
+
+.middle-circle {
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    border-radius: 50%;
+
+    border: 1px dashed
+        rgba(255, 60, 172, 0.16);
+}
+
+
+/* =========================================
+   PROFILE IMAGE
+========================================= */
+
+.profile-wrapper {
+    position: relative;
+
+    z-index: 3;
+
+    width: 265px;
+    height: 265px;
+
+    padding: 5px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--pink-neon),
+            #68133f,
+            transparent
+        );
+
+    box-shadow:
+        0 0 35px rgba(255, 47, 163, 0.15),
+        0 0 70px rgba(255, 47, 163, 0.08);
+}
+
+.profile-wrapper::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -8px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(255, 60, 172, 0.25);
+
+    box-shadow:
+        0 0 20px rgba(255, 47, 163, 0.06);
+}
+
+.profile-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #060506;
+}
+
+
+/* =========================================
+   FLOATING CODE
+========================================= */
+
+.floating-code {
+    position: absolute;
+
+    z-index: 5;
+
+    padding: 9px 12px;
+
+    color: var(--pink);
+
+    background: rgba(7, 4, 7, 0.92);
+
+    border: 1px solid
+        rgba(255, 60, 172, 0.20);
+
+    border-radius: 5px;
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.4),
+        0 0 15px rgba(255, 47, 163, 0.05);
+}
+
+.code-top {
+    top: 55px;
+
+    right: 55px;
+
+    animation: float 4s ease-in-out infinite;
+}
+
+.code-left {
+    left: 20px;
+
+    bottom: 90px;
+
+    animation: float 5s ease-in-out infinite;
+}
+
+.code-right {
+    right: 15px;
+
+    bottom: 120px;
+
+    animation: float 4.5s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================================
+   DEVELOPER LABEL
+========================================= */
+
+.developer-label {
+    position: absolute;
+
+    bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #5d585d;
+
+    font-family: monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.green-line {
+    width: 20px;
+
+    height: 1px;
+
+    background: var(--pink);
+
+    opacity: 0.6;
+
+    box-shadow:
+        0 0 7px var(--pink);
+}
+
+
+/* =========================================
+   SCROLL DOWN
+========================================= */
+
+.scroll-down {
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #444044;
+
+    font-family: monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.scroll-down i {
+    color: var(--pink-neon);
+
+    font-size: 10px;
+
+    filter:
+        drop-shadow(0 0 5px var(--pink-neon));
+
+    animation: scrollArrow 1.5s infinite;
+}
+
+@keyframes scrollArrow {
+
+    0% {
+        transform: translateY(0);
+
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translateY(5px);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+
+        opacity: 0.3;
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .home-container {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    .home-content {
+        margin: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .profile-area {
+        order: -1;
+
+        width: 330px;
+        height: 330px;
+    }
+
+    .outer-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .middle-circle {
+        width: 255px;
+        height: 255px;
+    }
+
+    .profile-wrapper {
+        width: 210px;
+        height: 210px;
+    }
+
+    .home h1 {
+        font-size: 60px;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 62px;
+    }
+
+    .nav-container {
+        padding: 0 18px;
+    }
+
+    nav {
+        position: absolute;
+
+        top: 62px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 22px;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        background: #080508;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .home {
+        padding: 90px 18px 50px;
+    }
+
+    .home h1 {
+        font-size: 48px;
+
+        letter-spacing: -3px;
+    }
+
+    .home h2 {
+        font-size: 22px;
+    }
+
+    .profile-area {
+        width: 280px;
+        height: 280px;
+    }
+
+    .outer-circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    .middle-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .profile-wrapper {
+        width: 180px;
+        height: 180px;
+    }
+
+    .code-top {
+        top: 35px;
+        right: 5px;
+    }
+
+    .code-left {
+        left: 0;
+        bottom: 55px;
+    }
+
+    .code-right {
+        right: -5px;
+        bottom: 80px;
+    }
+
+    .home-buttons {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .home-buttons .btn {
+        width: 100%;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+}
