@@ -58,7 +58,7 @@ const typingText = document.querySelector(".typing-text");
 const words = [
     "Web Developer",
     "BSIT Student",
-    "Love Sketching",
+    "Gwapo",
 ];
 
 let wordIndex = 0;

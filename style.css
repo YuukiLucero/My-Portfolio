@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background: #050305;
+    background: #080510;
     color: #ffffff;
     font-family: "Inter", sans-serif;
 
@@ -35,15 +35,15 @@ button {
 ========================================= */
 
 :root {
-    --pink: #ff3cac;
-    --pink-neon: #ff2fa3;
-    --pink-light: #ff71c6;
-    --pink-dark: #d91b82;
+    --pink: #A855F7;
+    --pink-neon: #B026FF;
+    --pink-light: #D8B4FE;
+    --pink-dark: #7E22CE;
 
-    --black: #050305;
-    --dark: #090609;
+    --black: #080510;
+    --dark: #0D0718;
 
-    --border: rgba(255, 60, 172, 0.13);
+    --border: rgba(168, 85, 247, 0.13);
 
     --gray: #858085;
 }
@@ -63,7 +63,7 @@ button {
 
     z-index: 1000;
 
-    background: rgba(5, 3, 5, 0.65);
+    background: rgba(8, 5, 16, 0.65);
 
     backdrop-filter: blur(15px);
 
@@ -73,7 +73,7 @@ button {
 }
 
 .navbar.scrolled {
-    background: rgba(5, 3, 5, 0.95);
+    background: rgba(8, 5, 16, 0.95);
 
     border-bottom-color: var(--border);
 }
@@ -219,18 +219,18 @@ nav a.active::after {
     background-image:
 
         linear-gradient(
-            rgba(5, 3, 5, 0.96),
-            rgba(5, 3, 5, 0.98)
+            rgba(8, 5, 16, 0.96),
+            rgba(8, 5, 16, 0.98)
         ),
 
         linear-gradient(
-            rgba(255, 60, 172, 0.025) 1px,
+            rgba(168, 85, 247, 0.025) 1px,
             transparent 1px
         ),
 
         linear-gradient(
             90deg,
-            rgba(255, 60, 172, 0.025) 1px,
+            rgba(168, 85, 247, 0.025) 1px,
             transparent 1px
         );
 
@@ -258,7 +258,7 @@ nav a.active::after {
 
     border-radius: 50%;
 
-    background: rgba(255, 47, 163, 0.10);
+    background: rgba(176, 38, 255, 0.10);
 
     filter: blur(100px);
 
@@ -281,7 +281,7 @@ nav a.active::after {
 
     border-radius: 50%;
 
-    background: rgba(255, 47, 163, 0.055);
+    background: rgba(176, 38, 255, 0.055);
 
     filter: blur(90px);
 
@@ -355,7 +355,7 @@ nav a.active::after {
 
     box-shadow:
         0 0 8px var(--pink-neon),
-        0 0 18px rgba(255, 47, 163, 0.5);
+        0 0 18px rgba(176, 38, 255, 0.5);
 
     animation: pulse 2s infinite;
 }
@@ -396,8 +396,8 @@ nav a.active::after {
     color: var(--pink);
 
     text-shadow:
-        0 0 15px rgba(255, 60, 172, 0.25),
-        0 0 35px rgba(255, 47, 163, 0.12);
+        0 0 15px rgba(168, 85, 247, 0.25),
+        0 0 35px rgba(176, 38, 255, 0.12);
 }
 
 
@@ -512,18 +512,18 @@ nav a.active::after {
     background: var(--pink-neon);
 
     box-shadow:
-        0 0 10px rgba(255, 47, 163, 0.20),
-        0 0 25px rgba(255, 47, 163, 0.10);
+        0 0 10px rgba(176, 38, 255, 0.20),
+        0 0 25px rgba(176, 38, 255, 0.10);
 }
 
 .primary-btn:hover {
     transform: translateY(-3px);
 
-    background: #ff45ad;
+    background: #C084FC;
 
     box-shadow:
-        0 0 15px rgba(255, 47, 163, 0.45),
-        0 0 35px rgba(255, 47, 163, 0.20);
+        0 0 15px rgba(176, 38, 255, 0.45),
+        0 0 35px rgba(176, 38, 255, 0.20);
 }
 
 
@@ -541,10 +541,10 @@ nav a.active::after {
     color: var(--pink);
 
     border-color:
-        rgba(255, 60, 172, 0.45);
+        rgba(168, 85, 247, 0.45);
 
     box-shadow:
-        0 0 15px rgba(255, 47, 163, 0.08);
+        0 0 15px rgba(176, 38, 255, 0.08);
 
     transform: translateY(-3px);
 }
@@ -596,10 +596,10 @@ nav a.active::after {
     color: var(--pink);
 
     border-color:
-        rgba(255, 60, 172, 0.4);
+        rgba(168, 85, 247, 0.4);
 
     box-shadow:
-        0 0 15px rgba(255, 47, 163, 0.10);
+        0 0 15px rgba(176, 38, 255, 0.10);
 
     transform: translateY(-3px);
 }
@@ -656,7 +656,7 @@ nav a.active::after {
     border-radius: 50%;
 
     border: 1px solid
-        rgba(255, 60, 172, 0.10);
+        rgba(168, 85, 247, 0.10);
 
     animation: rotate 20s linear infinite;
 }
@@ -706,7 +706,7 @@ nav a.active::after {
     border-radius: 50%;
 
     border: 1px dashed
-        rgba(255, 60, 172, 0.16);
+        rgba(168, 85, 247, 0.16);
 }
 
 
@@ -730,13 +730,13 @@ nav a.active::after {
         linear-gradient(
             135deg,
             var(--pink-neon),
-            #68133f,
+            #3B1764,
             transparent
         );
 
     box-shadow:
-        0 0 35px rgba(255, 47, 163, 0.15),
-        0 0 70px rgba(255, 47, 163, 0.08);
+        0 0 35px rgba(176, 38, 255, 0.15),
+        0 0 70px rgba(176, 38, 255, 0.08);
 }
 
 .profile-wrapper::before {
@@ -749,10 +749,10 @@ nav a.active::after {
     border-radius: 50%;
 
     border: 1px solid
-        rgba(255, 60, 172, 0.25);
+        rgba(168, 85, 247, 0.25);
 
     box-shadow:
-        0 0 20px rgba(255, 47, 163, 0.06);
+        0 0 20px rgba(176, 38, 255, 0.06);
 }
 
 .profile-image {
@@ -765,7 +765,7 @@ nav a.active::after {
 
     border-radius: 50%;
 
-    border: 5px solid #060506;
+    border: 5px solid #080510;
 }
 
 
@@ -782,10 +782,10 @@ nav a.active::after {
 
     color: var(--pink);
 
-    background: rgba(7, 4, 7, 0.92);
+    background: rgba(12, 7, 20, 0.92);
 
     border: 1px solid
-        rgba(255, 60, 172, 0.20);
+        rgba(168, 85, 247, 0.20);
 
     border-radius: 5px;
 
@@ -795,7 +795,7 @@ nav a.active::after {
 
     box-shadow:
         0 5px 20px rgba(0, 0, 0, 0.4),
-        0 0 15px rgba(255, 47, 163, 0.05);
+        0 0 15px rgba(176, 38, 255, 0.05);
 }
 
 .code-top {
@@ -1022,7 +1022,7 @@ nav a.active::after {
 
         gap: 20px;
 
-        background: #080508;
+        background: #10091C;
 
         border-bottom: 1px solid var(--border);
     }
